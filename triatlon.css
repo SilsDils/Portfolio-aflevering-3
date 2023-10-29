@@ -1,0 +1,121 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+h1 {
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #e53935;
+    height: 80px;
+    display: flex;
+    text-align: center;
+}
+
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    overflow-wrap: break-word;
+
+
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 20px #ff0000;
+    padding-right: 13px;
+    padding-left: 13px;
+    padding-bottom: 20px;
+
+}
+
+.flexbox-item-1 {
+    min-height: 250px;
+
+}
+
+.flexbox-item-1 input {
+    width: 50px;
+}
+
+.unit-select {
+    font-size: 16px;
+}
+
+.buttons-for-distance button {
+    width: 50px;
+    font-size: 8px;
+}
+/* Remove the spin button on input fields */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Remove the spin button on input fields, for firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/* input css for 2 time or pace */
+
+.flexbox-item-2 {
+    width: 250px;
+}
+.time-limiter {
+    width: 50px;
+    height: auto;
+}
+/* aligning input fields and images in 2 time or pace" */
+.activity-alignment {
+    display: flex;
+    align-items: center;
+}
+.combo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+.combo-box input{
+    width: 70%;
+    height: auto;
+}
+.combo-box select {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+}
+#choose-swim-distance, #choose-bike-distance, #choose-run-distance {
+    overflow-y: auto;
+    max-height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+.per-text {
+    margin: 0 5px;
+}
+.run-time-total, .swim-time-total, .bike-time-total {
+    width: 55px;
+}
+
+/* input css for 3 results */
+.results-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: border-radius 2s;
+}
+.results-button:hover {
+    border-radius: 5px;
+}
+#results {
+    width: 300px;
+}

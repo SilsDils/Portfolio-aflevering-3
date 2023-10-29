@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>triatlon-calculator</title>
+    <link rel="stylesheet" href="triatlon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="title">
+    <h1>
+        Simple triathlon calculator
+    </h1>
+</div>
+<div class="flexbox-container">
+    <div class="flexbox-item flexbox-item-1">
+        <div class="triathlon-distance">
+            <p> 1 Distance and Units </p>
+        </div>
+        <div class="buttons-for-distance" style="display: flex;">
+
+            <!-- Buttons -->
+            <button type="button" class="Ironman-button">Ironman</button>
+            <button type="button" class="half-Ironman-button">Half-Ironman</button>
+            <button type="button" class="one-tenth-ironman-button">1/10 Ironman</button>
+            <button type="button" class="olympic-distance-ironman-button">Olympic distance</button>
+            <!-- Script -->
+            <script src="triatlon.js"></script>
+
+            <!-- Images for swim, bike and run and their input fields -->
+        </div>
+        <div class="input-fields-distance" style="display: flex; align-items: center;">
+
+            <!-- Swim distance input field -->
+
+            <img src="./Images/Swim-logo.jpg"
+                 alt="swim-logo"
+                 width="40px"
+                 height="auto">
+            <input type="number" min="0"  class="swim-distance input-limiter" value="" >
+            <select class="swim-unit-select unit-select">
+                <option value="kilometers">Kilometers</option>
+                <option value="meters">Meters</option>
+            </select>
+        </div>
+
+        <!-- Bike distance input field -->
+
+        <div style="display: flex; align-items: center;">
+            <img src="./Images/biking-logo.jpg"
+                 alt="bike-image"
+                 width="40px"
+                 height="auto">
+            <input type="number" min="0" class="bike-distance input-limiter" value="" >
+            <select class="bike-unit-select unit-select">
+                <option value="kilometers">Kilometers</option>
+                <option value="meters">Meters</option>
+            </select>
+        </div>
+
+        <!-- Run distance input field -->
+
+        <div style="display: flex; align-items: center;">
+            <img src="./Images/running-logo.jpg"
+                 alt="run-image"
+                 width="40px"
+                 height="auto">
+            <input type="number" min="0"  class="run-distance input-limiter" value="" >
+            <select class="run-unit-select unit-select">
+                <option value="kilometers">Kilometers</option>
+                <option value="meters">Meters</option>
+            </select>
+        </div>
+    </div>
+
+
+
+
+    <div class="flexbox-item flexbox-item-2">
+        <div class="swim-bike-run-time">
+            <p>
+                2 Time or Pace
+            </p>
+        </div>
+        <p style="font-size: 10px">
+            Write your target time or pace. <br> it should be HH:MM:SS
+        </p>
+        // Time input fields
+        <h5> TIME </h5>
+        <div class="activity-alignment">
+            <img src="./Images/Swim-logo.jpg"
+                 alt="swim-logo"
+                 width="40px"
+                 height="auto">
+            <input type="text" min="0" id="swim-time-total" class="swim-time-total time-limiter">
+        </div>
+
+        <div class="activity-alignment">
+            <img src="./Images/biking-logo.jpg"
+                 alt="bike-image"
+                 width="40px"
+                 height="auto">
+            <input type="text" min="0" id="bike-time-total" class="bike-time-total time-limiter">
+        </div>
+
+        <div class="activity-alignment">
+            <img src="./Images/running-logo.jpg"
+                 alt="run-image"
+                 width="40px"
+                 height="auto">
+            <input type="text" min="0" id="run-time-total" class="run-time-total time-limiter" >
+        </div>
+
+        <!-- 2 PACE -->
+        <div class="swim-bike-run-pace">
+            <h5> PACE </h5>
+            <div class="activity-alignment">
+                <img src="./Images/Swim-logo.jpg"
+                     alt="swim-logo"
+                     width="40px"
+                     height="auto">
+                <input type="text" min="0" class="swim-pace time-limiter">
+                <span class="per-text"> per </span>
+                <div class="combo-box">
+                    <input type="text" class="swim-pace-distance customInput-pace-swim pace-limiter" placeholder="Enter distance">
+                    <select id="swim-distance-option" size="5" style="display: none;">
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="activity-alignment">
+                <img src="./Images/biking-logo.jpg"
+                     alt="bike-image"
+                     width="40px"
+                     height="auto">
+                <input type="text" min="0" class="bike-pace time-limiter">
+                <span class="per-text"> per </span>
+                <div class="combo-box">
+                    <input type="text" class="customInput-pace-bike pace-limiter" placeholder="Enter distance">
+                    <select id="bike-distance-option" size="5" style="display: none;">
+                    </select>
+                </div>
+            </div>
+
+            <div class="activity-alignment">
+                <img src="./Images/running-logo.jpg"
+                     alt="run-image"
+                     width="40px"
+                     height="auto">
+                <input type="text" min="0"  class="run-pace time-limiter">
+                <span class="per-text"> per </span>
+                <div class="combo-box">
+                    <input type="text" class="customInput-pace-run run-pace-distance pace-limiter" placeholder="Enter distance">
+                    <select id="run-distance-option" size="5" style="display: none;">
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="flexbox-item flexbox-item-3">
+        <div class="triathlon-results">
+            <p>
+                3 Triathlon results
+            </p>
+            <button type="button" class="results-button">
+                RESULTS
+            </button>
+            <p>
+                With the inputted values your total time for the triathlon will be:
+            </p>
+            <input type="text" id="total-time" placeholder="Results here" readonly>
+        </div>
+    </div>
+</div>
+</body>
+</html>
